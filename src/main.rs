@@ -17,7 +17,7 @@ struct NameForm {
 // Initialize Tera for template rendering
 async fn render_form(tera: Tera) -> impl IntoResponse {
     let ctx = Context::new();
-    let rendered = tera.render("form.html", &ctx).unwrap();
+    let rendered = tera.render("index.html", &ctx).unwrap();
     Html(rendered)
 }
 
