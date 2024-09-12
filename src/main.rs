@@ -1,41 +1,18 @@
 use axum::{
-    extract::Form,
-    response::{Html, IntoResponse},
     routing::{get, post},
     Router,
 };
-use serde::Deserialize;
 use std::net::SocketAddr;
-use tera::{Context, Tera};
 
-// Define a form data structure using Serde
-#[derive(Deserialize)]
-struct NameForm {
-    name: String,
-}
-
-// Initialize Tera for template rendering
-async fn render_form(tera: Tera) -> impl IntoResponse {
-    let ctx = Context::new();
-    let rendered = tera.render("index.html", &ctx).unwrap();
-    Html(rendered)
-}
-
-// Handle form submission using HTMX
-async fn handle_submit(Form(form): Form<NameForm>) -> impl IntoResponse {
-    let response = format!("<p>Hello, {}!</p>", form.name);
-    Html(response)
-}
+mod handlers;
+mod views;
 
 #[tokio::main]
 async fn main() {
-    // Initialize Tera
-    let tera = Tera::new("templates/**/*").unwrap();
-
     // Define routes
     let app = Router::new()
-        .route("/", get(move || render_form(tera.clone())))
-        .route("/submit", post(handle_submit));
+        .route("/", get(handlers::get_form))
+        .route("/submit", post(handlers::handle_submit));
 
     // Set up the server
     let addr = SocketAddr::from(([127, 0, 0, 1], 3000));
@@ -45,4 +22,3 @@ async fn main() {
         .await
         .unwrap();
 }
-
