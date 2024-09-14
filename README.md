@@ -15,7 +15,7 @@ MASH allows for rapid prototyping with simple UI elements while maintaining perf
 
 ## Hello World! 🌍
 
-In this example, we build a basic web application where the user inputs their name, and the server responds with a greeting. The app leverages HTMX to dynamically update the page without needing a full reload, Maud for HTML generation, Axum for request routing, and Sass for minimal styling.
+In this [example](https://github.com/8hantanu/mash), we build a basic web application where the user inputs their name, and the server responds with a greeting. The app leverages HTMX to dynamically update the page without needing a full reload, Maud for HTML generation, Axum for request routing, and Sass for minimal styling.
 
 The project includes:
 - `handlers.rs`: Contains the logic for handling HTTP requests. In this example, it renders the form and handles form submissions.
@@ -65,7 +65,7 @@ html! {
 ```
 
 #### **Sass** - Styling the Application 🎨
-[Mold](https://yree.com/mold) is a pre-built sass framework that keeps the CSS minimal and responsive. I include Mold’s [SCSS](https://github.com/yree/mold/blob/master/_sass/mold.scss) for my styling needs, using classes like `.grid` and `.w` to manage layout and responsiveness with almost no additional effort. You can easily extend or override styles using Sass variables or mixins to ensure that your app's UI is both customizable and scalable.
+[Mold](https://yree.io/mold) is a pre-built sass framework that keeps the CSS minimal and responsive. I include Mold’s [SCSS](https://github.com/yree/mold/blob/master/_sass/mold.scss) for my styling needs, using classes like `.grid` and `.w` to manage layout and responsiveness with almost no additional effort. You can easily extend or override styles using Sass variables or mixins to ensure that your app's UI is both customizable and scalable.
 
 ## Why you'll love MASH ❤️
 
@@ -73,7 +73,7 @@ html! {
 
 - **Rapid Prototyping**: Thanks to Axum’s easy routing and HTMX’s seamless client-server interaction, you can quickly prototype interactive web applications.
 
-- **Simple Styling**: Using Sass from the [mold](https://yree.com/mold) framework provides responsive design with minimal effort, keeping UI/UX straightforward, clean, and adaptable.
+- **Simple Styling**: Using Sass from the [mold](https://yree.io/mold) framework provides responsive design with minimal effort, keeping UI/UX straightforward, clean, and adaptable.
 
 - **Performance**: By using Rust and asynchronous programming via Tokio (used by Axum), the app remains highly performant even under load.
 
