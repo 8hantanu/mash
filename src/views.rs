@@ -12,17 +12,24 @@ pub fn render_form() -> Markup {
                 link rel="preconnect" href="https://fonts.googleapis.com";
                 link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="";
                 link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;display=swap" rel="stylesheet";
-                title { "HTMX Form" }
+                title { "The MASH Form 🥔" }
                 script src="https://unpkg.com/htmx.org" {}
             }
             body {
                 div class="w" {
-                    h1 { "Submit Your Name" }
+                    h1 { "What's your name!" }
                     form hx-post="/submit" hx-target="#response" {
-                        label for="name" { "Name: " }
-                        input type="text" id="name" name="name" required;
+                        div class="grid" {
+                        input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            placeholder="Enter your name..."
+                            required;
                         button type="submit" { "Submit" }
+                        }
                     }
+                    br;
                     div id="response" {}
                 }
             }
