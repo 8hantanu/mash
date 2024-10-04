@@ -7,5 +7,6 @@ description: >
 
 url: https://8hantanu.net
 baseurl: /mash
+git_repo: 8hantanu/mash
 
 remote_theme: yree/mold
