@@ -1,10 +1,18 @@
 [package]
-name = "mash"
+name = "mash-up"
 version = "0.1.0"
 edition = "2021"
+authors = ["Shantanu Mishra <shantanu@yree.io>"]
+description = "A minimalist web development stack that combines the power of Maud, Axum, SQLx and HTMX."
+repository = "https://github.com/yree/mash"
+license = "MIT"
+readme = "README.md"
+keywords = ["web", "rust", "mash", "maud", "axum", "sqlx", "htmx"]
+categories = ["web-programming", "libraries"]
 
 [dependencies]
 axum = "0.6"
 maud = "0.25"
 tokio = { version = "1", features = ["full"] }
 serde = { version = "1", features = ["derive"] }
+sqlx = { version = "0.7", features = ["runtime-tokio", "sqlite"] }
