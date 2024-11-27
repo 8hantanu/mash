@@ -1,12 +1,11 @@
 title: mash
-author: Shantanu Mishra
-email: dev@8hantanu.net
+email: mash@yree.io
 description: >
   as simple as potatoes!
-  a minimalist web stack that combines the power of maud, axum, sass and htmx.
+  a minimalist web stack that combines the power of maud, axum, sqlx and htmx.
 
-url: https://8hantanu.net
+url: https://yree.io
 baseurl: /mash
-git_repo: 8hantanu/mash
+git_repo: yree/mash
 
 remote_theme: yree/mold
