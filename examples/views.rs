@@ -21,7 +21,7 @@ pub fn render_form() -> Markup {
                     div class="w" id="markdown-view" _="on load call MathJax.typeset()" {
                         h1 { "Mash 🥔" }
                         p { "A simple demo using the mash stack." }
-                        h2 { "What's your name!" }
+                        h2 { "What's your name?" }
                         form hx-post="/submit" hx-target="#response" {
                             div class="grid" {
                                 input 
@@ -38,6 +38,11 @@ pub fn render_form() -> Markup {
                             p { "Hello world!" }
                         }
                     }
+                }
+            }
+            footer {
+                div class="w" {
+                    p { a href="https://yree.io/mash" { "mash" } " 🥔 :: a " a href="https://yree.io" { "Yree" } " stack ♥" }
                 }
             }
         }
