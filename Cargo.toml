@@ -8,7 +8,7 @@ repository = "https://github.com/yree/mash"
 license = "MIT"
 readme = "README.md"
 keywords = ["web", "mash", "maud", "axum", "htmx"]
-categories = ["web-programming", "libraries"]
+categories = ["web-programming"]
 
 [dependencies]
 axum = "0.6"
