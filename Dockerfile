@@ -11,10 +11,11 @@ COPY --from=planner /app/recipe.json recipe.json
 RUN cargo chef cook --release --recipe-path recipe.json
 # Build application
 COPY . .
-RUN cargo build --release --bin mash
+RUN cargo build --release --example hello_world
 
 # We do not need the Rust toolchain to run the binary!
 FROM debian:bookworm-slim AS runtime
 WORKDIR /app
-COPY --from=builder /app/target/release/mash /usr/local/bin
-ENTRYPOINT ["/usr/local/bin/mash"]
+COPY --from=builder /app/target/release/examples/hello_world /usr/local/bin
+ENTRYPOINT ["/usr/local/bin/hello_world"]
+
