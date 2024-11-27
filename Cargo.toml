@@ -7,7 +7,7 @@ description = "A minimalist web development stack that combines the power of Mau
 repository = "https://github.com/yree/mash"
 license = "MIT"
 readme = "README.md"
-keywords = ["web", "rust", "mash", "maud", "axum", "sqlx", "htmx"]
+keywords = ["web", "mash", "maud", "axum", "htmx"]
 categories = ["web-programming", "libraries"]
 
 [dependencies]
